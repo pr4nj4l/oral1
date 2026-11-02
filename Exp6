@@ -1,0 +1,175 @@
+Bro ❤️ your new PDF is JavaScript Experiment 6: Array Operations. Let's prepare it in the same simple style as your previous experiments, with short code, easy explanations, and important viva questions.
+
+According to your PDF, the program performs three operations:
+
+1. Remove a specific element from an array.
+2. Check whether an array contains a particular value.
+3. Empty an array.
+
+The key methods are `indexOf()`, `splice()`, `includes()`, and `length = 0`.
+
+## 1. Understand the experiment
+
+An array stores multiple values in a single variable.
+
+For example:
+
+```
+let arr = ["apple", "banana", "cherry"];
+```
+
+### Operation 1: Remove an element
+
+Before: `["apple", "banana", "cherry"]`
+
+After removing `"banana"`: `["apple", "cherry"]`
+
+### Operation 2: Search for an element
+
+Array: `["apple", "banana", "cherry"]`
+
+Search for `"banana"` → `true`
+
+### Operation 3: Empty an array
+
+Before: `[1, 2, 3]`
+
+After: `[]`
+
+## 2. Short and easy practical code
+
+I've simplified your PDF's program while keeping all three required operations. You can write this in a JavaScript file and run it in the browser console or Node.js.
+
+```
+
+ // 1. Remove an element
+let arr = ["apple", "banana", "cherry"];
+
+let index = arr.indexOf("banana");
+
+if (index !== -1) {
+    arr.splice(index, 1);
+}
+
+console.log("After removal:", arr);
+
+// 2. Check if value exists
+console.log("Contains apple:", arr.includes("apple"));
+
+// 3. Empty the array
+arr.length = 0;
+
+console.log("Empty array:", arr);
+
+```
+
+## 3. Understand the code in easy language
+
+Part 1: Remove an element
+
+```
+let index = arr.indexOf("banana");
+
+if (index !== -1) {
+    arr.splice(index, 1);
+}
+```
+
+- `indexOf("banana")` finds the position of `"banana"`.
+- `-1` means the element was not found.
+- `splice(index, 1)` removes one element from that position.
+- `if` ensures we remove the element only if it exists.
+
+Part 2: Check if an element exists
+
+```
+arr.includes("apple");
+```
+
+`includes()` checks whether the array contains `"apple"`.
+
+It returns `true` if found and `false` if not found.
+
+Part 3: Empty the array
+
+```
+arr.length = 0;
+```
+
+This removes all elements from the array, making it empty.
+
+Memory trick: Find → Remove → Check → Empty.
+
+## 4. Expected output
+
+```
+After removal: [ 'apple', 'cherry' ]
+Contains apple: true
+Empty array: []
+```
+
+## 5. Possible oral exam questions
+
+Learn these short answers first.
+
+Q1. What is the aim of Experiment 6?
+
+To perform array operations such as removing an element, checking a value, and emptying an array.
+
+Q2. What is an array?
+
+An array is a variable that stores multiple values.
+
+Q3. What is the index of the first array element?
+
+Zero (0).
+
+Q4. What does `indexOf()` do?
+
+It returns the index of an element, or `-1` if it is not found.
+
+Q5. What is `splice()` used for?
+
+It adds or removes elements from an array.
+
+Q6. What does `splice(index, 1)` mean?
+
+Remove one element starting from the specified index.
+
+Q7. What is `includes()`?
+
+It checks whether an array contains a specified value.
+
+Q8. What does `includes()` return?
+
+It returns `true` or `false`.
+
+Q9. How do you empty an array?
+
+By setting its length to zero: `arr.length = 0`.
+
+Q10. What is the difference between `splice()` and `slice()`?
+
+`splice()` modifies the original array; `slice()` returns a portion without modifying the original array.
+
+Q11. What is the difference between `indexOf()` and `includes()`?
+
+`indexOf()` returns an index or `-1`, while `includes()` returns `true` or `false`.
+
+Q12. Can an array store different data types?
+
+Yes. It can store numbers, strings, objects, and other values.
+
+## 6. Conclusion for your practical journal
+
+This program performs array operations using `indexOf()`, `splice()`, `includes()`, and `length = 0` to remove an element, check for a value, and empty an array.
+
+## 7. Let's practise your viva!
+
+Viva practice · Question 1
+
+What is the difference between `indexOf()` and `includes()` in JavaScript?
+
+Hint: One returns a position; the other returns true or false.
+
+Check my answer
