@@ -1,0 +1,258 @@
+Bro ❤️ let's prepare JavaScript Experiment 2: Multiplication Table Generator step by step for your practical and oral exam.
+
+I've checked your PDF. The experiment uses HTML input fields, a JavaScript function, a `for` loop, multiplication, and displaying the result on a webpage.
+
+## 1. Understand the experiment
+
+Aim: Write a JavaScript program to generate the multiplication table of a given number.
+
+For example, if the user enters the number `5` and the limit `6`, the webpage displays:
+
+## Multiplication Table of 5
+
+1 × 5
+
+\= 5
+
+2 × 5
+
+\= 10
+
+3 × 5
+
+\= 15
+
+4 × 5
+
+\= 20
+
+5 × 5
+
+\= 25
+
+6 × 5
+
+\= 30
+
+What does the limit mean? It tells the program how many lines to generate. Here, the limit is 6, so the table ends at \\(5 \times 6\\).
+
+## 2. Easy practical code
+
+This version keeps the important concepts from your PDF but makes the code easier to read and remember.
+
+```
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Multiplication Table</h2>
+
+Enter number:
+<input type="number" id="num">
+
+<br><br>
+
+Enter limit:
+<input type="number" id="limit">
+
+<button onclick="multiply()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function multiply() {
+    let n = Number(document.getElementById("num").value);
+    let limit = Number(document.getElementById("limit").value);
+    let output = "";
+
+    for (let i = 1; i <= limit; i++) {
+        output += i + " * " + n + " = " + (i * n) + "<br>";
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
+</html>
+
+```
+
+## 3. Understand the code in simple language
+
+Learn these five important parts.
+
+Part 1: Take input
+
+```
+<input type="number" id="num">
+```
+
+Creates a box where the user enters a number.
+
+Part 2: Button
+
+```
+<button onclick="multiply()">Calculate</button>
+```
+
+When the user clicks the button, the `multiply()` function runs.
+
+Part 3: Get the number
+
+```
+let n = Number(document.getElementById("num").value);
+```
+
+Gets the user's input and converts it into a number.
+
+Part 4: Generate the table
+
+```
+for (let i = 1; i <= limit; i++) {
+    output += i + " * " + n + " = " + (i * n) + "<br>";
+}
+```
+
+This is the most important part.
+
+- `let i = 1` — starts counting from 1.
+- `i <= limit` — repeats until the limit is reached.
+- `i++` — increases `i` by 1 each time.
+- `i * n` — calculates the multiplication.
+- `output +=` — adds each line to the output.
+- `<br>` — moves the next line to a new line.
+
+Part 5: Display the table
+
+```
+document.getElementById("result").innerHTML = output;
+```
+
+Displays the complete table on the webpage.
+
+## 4. The most important concept: `for` loop
+
+A `for` loop repeats a block of code multiple times. In this experiment, it generates each line of the multiplication table.
+
+### Try the loop yourself
+
+Number
+
+### 5
+
+1
+
+6
+
+12
+
+Limit
+
+### 6
+
+1
+
+5
+
+10
+
+1 × 5
+
+\= 5
+
+2 × 5
+
+\= 10
+
+3 × 5
+
+\= 15
+
+4 × 5
+
+\= 20
+
+5 × 5
+
+\= 25
+
+6 × 5
+
+\= 30
+
+Memory trick: Start → Check → Execute → Increase.
+
+- Start: `i = 1`
+- Check: `i <= limit`
+- Execute: calculate and display the line
+- Increase: `i++`
+
+## 5. Possible oral exam questions with answers
+
+Learn these short answers first.
+
+Q1. What is the aim of Experiment 2?
+
+To generate the multiplication table of a given number using JavaScript.
+
+Q2. What is a loop?
+
+A loop repeats a block of code multiple times.
+
+Q3. Which loop is used in this program?
+
+A `for` loop.
+
+Q4. Why do we use a `for` loop?
+
+To generate each line of the multiplication table repeatedly.
+
+Q5. What does `i++` mean?
+
+It increases the value of `i` by 1.
+
+Q6. What is the use of `i <= limit`?
+
+It repeats the loop while `i` is less than or equal to the limit.
+
+Q7. What is the use of `output +=`?
+
+It adds each new line to the existing output.
+
+Q8. What does `<br>` do?
+
+It moves the next content to a new line.
+
+Q9. What is `innerHTML` used for?
+
+To display the generated multiplication table on the webpage.
+
+Q10. What is the difference between a `for` loop and a `while` loop?
+
+A `for` loop puts initialization, condition, and increment together. A `while` loop usually handles them separately.
+
+Q11. What are the objectives of this experiment?
+
+To use loops for repetitive output and update HTML content using JavaScript.
+
+Q12. What is a callback function?
+
+A function passed as an argument to another function.
+
+## 6. Conclusion to write in your practical journal
+
+This program successfully generates the multiplication table of a given number using JavaScript. It demonstrates the use of a `for` loop and basic arithmetic operations.
+
+## 7. Now let's practise your viva!
+
+I'll ask one question at a time, just like your examiner. You answer in your own words, and I'll check it and help you improve it.
+
+Viva practice · Question 1
+
+What is a loop in JavaScript?
+
+Hint: Think about repeating code.
+
+Check my answer
