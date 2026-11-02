@@ -1,0 +1,309 @@
+Bro, don't worry! ❤️ We'll prepare JavaScript Experiment 1 step by step in a way that's easy to understand, remember, write in your practical exam, and explain in your oral exam.
+
+I've checked your PDF. Your Experiment 1 is:
+
+## Experiment 1: Area Calculations
+
+Aim: Write a JavaScript program to calculate the area of a triangle, rectangle, and circle.
+
+Main concepts you need to learn:
+
+- HTML input fields
+- JavaScript functions
+- Getting input using `getElementById()`
+- Calculating areas using formulas
+- Displaying results on a webpage
+- The `onclick` event
+
+## 1. First, understand the experiment
+
+Imagine a webpage where you enter numbers and click a button. JavaScript calculates the answer and displays it on the screen.
+
+[Area of a Triangle - Formula, Example, Practice](https://images.openai.com/static-rsc-4/fC6dzt4hwsn0RGQr2_3RpbHTGVHJDm6seIQ5VSJhw3y39yU6hX42ZyvS570jOr62riTf5p-J-Uo6XWL99WMIyqMrDkl2VLWxOZfKY6QgTu_EclZwABwXDEAsKiKgu2gb-17bQzsMgixpRbAPpX9GORE90ONbDylTBIjrFmzKpP8?purpose=inline)
+
+Triangle
+
+Formula: Area = ½ × base × height
+
+Example: Base = 4, Height = 6
+
+Answer = 12
+
+[Rectangular Field/Plot Area Calculator - CalculatorLib](https://images.openai.com/static-rsc-4/amHXadOCRMl1MnQkpq-dFz8eukKO3-vhynjCLuXAPyQje2hBweYRmHJQdmlKAW0EXO_O84siJsNLNzNqr6hWdKi0OGxz4DxvJxAfnD-bqLzxcMvSfCJIrzVPd17gjbkb4i2hD2oleY2Ej7ETe16blCsTL96BxZ2LV0-LVllX5hc?purpose=inline)
+
+Rectangle
+
+Formula: Area = length × width
+
+Example: Length = 5, Width = 3
+
+Answer = 15
+
+[Circles – radius, diameter and formulas | Mathivo](https://images.openai.com/static-rsc-4/SiAeZYaZllAZ4yX_ed6OnlquPo4i0arZQRZ3zSe2KG6FcIrxE6qToM-BSbhy5cCp9YYp_ym6H55tB3hehS0X2Y-z6FyvPiW4KEkEObyY4HQ5vzF150y216oC70k2JQO_2RWZRZIMWX6LMyp0ce_lhTBym4GEWcgwX74JNG5TPKs?purpose=inline)
+
+Circle
+
+Formula: Area = π × radius × radius
+
+Example: Radius = 3
+
+Answer ≈ 28.26 (using π = 3.14)
+
+Remember just these three formulas first. The code is simply used to take the numbers, apply the formulas, and show the answers.
+
+## 2. Easy practical code to remember
+
+I've simplified the code from your PDF. The important points remain the same: HTML inputs, JavaScript functions, button clicks, formulas, and displaying the output.
+
+You can copy this into a file named `experiment1.html` and open it in a browser.
+
+```
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area Calculator</title>
+</head>
+<body>
+
+<h3>Area of Triangle</h3>
+Base: <input type="number" id="base">
+Height: <input type="number" id="height">
+<button onclick="triangle()">Calculate</button>
+<p id="result1"></p>
+
+<h3>Area of Rectangle</h3>
+Length: <input type="number" id="length">
+Width: <input type="number" id="width">
+<button onclick="rectangle()">Calculate</button>
+<p id="result2"></p>
+
+<h3>Area of Circle</h3>
+Radius: <input type="number" id="radius">
+<button onclick="circle()">Calculate</button>
+<p id="result3"></p>
+
+<script>
+function triangle() {
+    let b = Number(document.getElementById("base").value);
+    let h = Number(document.getElementById("height").value);
+    let area = (b * h) / 2;
+    document.getElementById("result1").innerHTML = area;
+}
+
+function rectangle() {
+    let l = Number(document.getElementById("length").value);
+    let w = Number(document.getElementById("width").value);
+    let area = l * w;
+    document.getElementById("result2").innerHTML = area;
+}
+
+function circle() {
+    let r = Number(document.getElementById("radius").value);
+    let area = 3.14 * r * r;
+    document.getElementById("result3").innerHTML = area;
+}
+</script>
+
+</body>
+</html>
+
+```
+
+### 3. Understand the code line by line
+
+Don't try to memorize the entire code at once. Understand these five important parts.
+
+### Part 1: Take input
+
+```
+<input type="number" id="base">
+```
+
+This creates a box where the user enters a number.
+
+- `type="number"` allows numeric input.
+- `id="base"` gives the input a unique name.
+  ### Part 2: Create a button
+
+```
+<button onclick="triangle()">Calculate</button>
+```
+
+When the user clicks the button, the `triangle()` function runs.
+
+Remember: `onclick` means when clicked.
+
+### Part 3: Get the input value
+
+```
+let b = Number(document.getElementById("base").value);
+```
+
+In simple words:
+
+- `getElementById("base")` finds the input box.
+- `.value` gets the entered value.
+- `Number()` converts it into a number.
+- `let b` stores that number in variable `b`.
+  ### Part 4: Calculate the area
+
+```
+let area = (b * h) / 2;
+```
+
+This applies the triangle formula and stores the answer in `area`.
+
+### Part 5: Display the result
+
+```
+document.getElementById("result1").innerHTML = area;
+```
+
+This displays the calculated answer on the webpage inside the element whose ID is `result1`.
+
+Easy memory trick: Input → Button → Function → Formula → Output.
+
+The rectangle and circle functions follow exactly the same pattern. Only the input names and formulas change.
+
+## 4. Expected practical output
+
+For example, if you enter these values:
+
+Triangle
+
+Base = 4, Height = 6
+
+## 12
+
+Rectangle
+
+Length = 5, Width = 3
+
+## 15
+
+Circle
+
+Radius = 3
+
+## 28.26
+
+## 5. Possible oral (viva) questions with easy answers
+
+Learn these short answers first. They cover the experiment and the function theory included in your PDF.
+
+### Basic questions
+
+Q1. What is the aim of Experiment 1?
+
+To calculate the areas of a triangle, rectangle, and circle using JavaScript.
+
+Q2. What is JavaScript?
+
+JavaScript is a programming language used to make webpages interactive.
+
+Q3. What is a function?
+
+A function is a reusable block of code that performs a specific task.
+
+Q4. Why do we use functions in this program?
+
+To calculate each shape's area when its button is clicked.
+
+Q5. What is the use of `onclick`?
+
+It executes a function when the user clicks a button.
+
+Q6. What is HTML?
+
+HTML is used to create the structure of a webpage.
+
+Q7. What is an input field?
+
+It is a box used to accept data from the user.
+
+Q8. What is the use of `id` in HTML?
+
+It uniquely identifies an HTML element.
+
+Q9. What does `document.getElementById()` do?
+
+It finds an HTML element using its ID.
+
+Q10. What is `.value`?
+
+It gets the value entered in an input field.
+
+Q11. Why do we use `Number()`?
+
+To convert an input value into a number for calculations.
+
+Q12. What is `innerHTML`?
+
+It is used to get or set the HTML content inside an element. Here, we use it to display the answer.
+
+### Formula and code questions
+
+Q13. What is the formula for the area of a triangle?
+
+Area = ½ × base × height.
+
+Q14. What is the formula for the area of a rectangle?
+
+Area = length × width.
+
+Q15. What is the formula for the area of a circle?
+
+Area = π × radius × radius.
+
+Q16. Why do we use 3.14 in the circle formula?
+
+It is an approximate value of π (pi).
+
+Q17. What is a variable?
+
+A variable stores a value that a program can use.
+
+Q18. What is the difference between `let` and `const`?
+
+`let` allows reassignment; `const` does not allow reassignment.
+
+Q19. Why are the IDs `result1`, `result2`, and `result3` different?
+
+So each calculated answer appears in its own output area.
+
+Q20. What is the output if the triangle's base or height is zero?
+
+The calculated area is zero.
+
+Q21. Why did we use `Number()` instead of `parseInt()`?
+
+`Number()` converts numeric input and supports decimal values. `parseInt()` converts a value to an integer, so it can discard the decimal part.
+
+### Function types from your PDF
+
+Your PDF also includes these function types, so prepare their definitions even though the main practical uses ordinary named functions.
+
+| Type                | Easy definition                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------- |
+| Function expression | A function stored in a variable.                                                   |
+| Arrow function      | A shorter way to write a function using `=>`.                                      |
+| IIFE                | A function that executes immediately after it is defined.                          |
+| Callback function   | A function passed as an argument to another function.                              |
+| Anonymous function  | A function without a name.                                                         |
+| Nested function     | A function defined inside another function.                                        |
+| Pure function       | A function that gives the same output for the same inputs and has no side effects. |
+
+## 6. Let's practise like a real oral exam
+
+I'll ask you one question at a time. You answer in your own simple words, and I'll correct your answer and help you remember it.
+
+Question 1 of practice
+
+Easy
+
+What is the aim of Experiment 1?
+
+Try answering without looking at the notes.
+
+Check my answer
