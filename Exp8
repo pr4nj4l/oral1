@@ -1,0 +1,192 @@
+
+Bro ❤️ this is JavaScript Experiment 8: Background Color and Input Focus Event. I've checked your PDF, including the program on pages 2–3 and the expected output screenshot on page 4.
+
+We'll keep the important points but simplify the code so it's easy to write and explain in your practical exam.
+
+## 1. Understand the experiment
+
+Aim: Create a webpage that changes its background color when the mouse moves over a link and changes an input field's color when the field is selected.
+
+Your PDF demonstrates two main events:
+
+- `onmouseover` — changes the webpage background when the mouse moves over “Bg Colour”.
+- `onfocus` — changes the input box background to yellow when you select it.
+
+It also uses `setTimeout()` to change the webpage background through a sequence of colors.
+
+## 2. Short and easy practical code
+
+```
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color</title>
+
+    <script>
+    function changeColor() {
+        document.body.style.backgroundColor = "red";
+
+        setTimeout(function() {
+            document.body.style.backgroundColor = "pink";
+        }, 2000);
+
+        setTimeout(function() {
+            document.body.style.backgroundColor = "green";
+        }, 4000);
+
+        setTimeout(function() {
+            document.body.style.backgroundColor = "red";
+        }, 6000);
+    }
+
+    function myFunction(x) {
+        x.style.backgroundColor = "yellow";
+    }
+    </script>
+</head>
+
+<body>
+    <a href="#" onmouseover="changeColor()">Bg Colour</a>
+
+    <br><br>
+
+    Enter your name:
+    <input type="text" onfocus="myFunction(this)">
+</body>
+</html>
+
+```
+
+How to run it: Save the code as `experiment8.html` and open it in a browser.
+
+## 3. Understand the code line by line
+
+Part 1: Change the background color
+
+```
+document.body.style.backgroundColor = "red";
+```
+
+This changes the background color of the whole webpage to red.
+
+- `document` means the webpage.
+- `body` means the main visible page area.
+- `style` accesses CSS styles.
+- `backgroundColor` changes the background color.
+
+Part 2: Change color after a delay
+
+```
+setTimeout(function() {
+    document.body.style.backgroundColor = "pink";
+}, 2000);
+```
+
+This changes the background to pink after 2000 milliseconds (2 seconds).
+
+Part 3: Mouse-over event
+
+```
+<a href="#" onmouseover="changeColor()">Bg Colour</a>
+```
+
+When the mouse moves over the link, the `changeColor()` function runs.
+
+Part 4: Focus event
+
+```
+<input type="text" onfocus="myFunction(this)">
+```
+
+When you select the input box, the `myFunction()` function runs.
+
+Part 5: Highlight the input box
+
+```
+function myFunction(x) {
+    x.style.backgroundColor = "yellow";
+}
+```
+
+Here, `x` represents the input field. Its background changes to yellow.
+
+Remember: Mouse over → Page color changes. Focus → Input becomes yellow.
+
+## 4. Expected output
+
+According to the screenshot on page 4 of your PDF, the webpage contains a “Bg Colour” link and a name input field highlighted in yellow.
+
+Interactive example — try the events
+
+Bg Colour (move over / tap)
+
+Enter your name:
+
+Tap to focus
+
+In the actual program, the background changes automatically after 2, 4, and 6 seconds. The example above lets you preview the color changes manually.
+
+## 5. Possible oral exam questions with easy answers
+
+Q1. What is the aim of Experiment 8?
+
+To change the webpage background color using mouse-over and input-focus events.
+
+Q2. What is an event in JavaScript?
+
+An event is an action or occurrence detected by the browser.
+
+Q3. What is `onmouseover`?
+
+It is an event that occurs when the mouse moves over an element.
+
+Q4. What is `onfocus`?
+
+It occurs when an element, such as an input field, receives focus.
+
+Q5. What is `setTimeout()`?
+
+It executes a function once after a specified delay.
+
+Q6. What does 2000 mean in `setTimeout()`?
+
+It means 2000 milliseconds, or 2 seconds.
+
+Q7. What is DOM?
+
+DOM stands for Document Object Model. It represents the webpage as objects that JavaScript can access and modify.
+
+Q8. How do you change the background color using JavaScript?
+
+By using `document.body.style.backgroundColor`.
+
+Q9. What does `this` refer to in the HTML event?
+
+It refers to the HTML element that triggered the event.
+
+Q10. What is the difference between `onmouseover` and `onfocus`?
+
+`onmouseover` responds to mouse movement over an element; `onfocus` responds when an element receives focus.
+
+Q11. What is dynamic styling?
+
+Changing the appearance of a webpage using JavaScript while it is running.
+
+Q12. What is the difference between `setTimeout()` and `setInterval()`?
+
+`setTimeout()` runs once after a delay, while `setInterval()` repeats at regular intervals.
+
+## 6. Conclusion for your practical journal
+
+This program demonstrates event handling in JavaScript using `onmouseover` and `onfocus`. It changes the webpage background color and highlights an input field, while `setTimeout()` creates timed color changes.
+
+## 7. Let's practise your viva!
+
+Viva practice · Question 1
+
+What is the difference between `onmouseover` and `onfocus`?
+
+Hint: Mouse movement versus selecting an input field.
+
+Check my answer
