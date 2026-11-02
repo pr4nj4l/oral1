@@ -1,0 +1,189 @@
+Bro ❤️ I've received your next PDF! This is JavaScript Experiment 4: String Comparison Tool.
+
+We'll prepare it in the same easy style as the previous experiments, keeping the important concepts from your practical manual.
+
+## 1. Understand the experiment
+
+Aim: Write a JavaScript program to compare two strings using different methods.
+
+For example, enter `Hello` and `hello`. The program checks whether they are equal, whether their lengths match, whether `localeCompare()` considers them equal, and whether they match when letter case is ignored.
+
+Your PDF includes four comparisons:
+
+- Equality check using `===`
+- Length comparison using `.length`
+- Locale-based comparison using `localeCompare()`
+- Case-insensitive comparison using `toLowerCase()`
+
+## 2. Short and easy practical code
+
+I've simplified the code while keeping all four comparison methods required by your PDF.
+
+```
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>String Comparison</h2>
+
+<input id="s1" placeholder="Enter first string">
+<input id="s2" placeholder="Enter second string">
+
+<button onclick="compare()">Compare</button>
+
+<p id="result"></p>
+
+<script>
+function compare() {
+    let a = document.getElementById("s1").value;
+    let b = document.getElementById("s2").value;
+
+    let output = "Equality: " + (a === b ? "Equal" : "Not Equal") + "<br>";
+    output += "Length: " + (a.length === b.length ? "Same" : "Different") + "<br>";
+    output += "Locale: " + (a.localeCompare(b) === 0 ? "Equal" : "Not Equal") + "<br>";
+    output += "Ignore Case: " + (a.toLowerCase() === b.toLowerCase() ? "Equal" : "Not Equal");
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
+</html>
+
+```
+
+## 3. Understand the code in simple language
+
+You only need to understand these five parts.
+
+Part 1: Get two strings
+
+```
+let a = document.getElementById("s1").value;
+let b = document.getElementById("s2").value;
+```
+
+Gets the two strings entered by the user.
+
+Part 2: Equality check
+
+```
+a === b
+```
+
+Checks whether both strings are exactly equal, including uppercase and lowercase letters.
+
+Example: `"Hello" === "hello"` gives `false`.
+
+Part 3: Length comparison
+
+```
+a.length === b.length
+```
+
+Checks whether both strings contain the same number of characters.
+
+Example: `"cat"` and `"dog"` have the same length, even though they are different words.
+
+Part 4: Locale comparison
+
+```
+a.localeCompare(b) === 0
+```
+
+Returns `true` in this condition when `localeCompare()` returns `0`, meaning the strings compare as equivalent under the locale's comparison rules.
+
+Part 5: Ignore uppercase and lowercase
+
+```
+a.toLowerCase() === b.toLowerCase()
+```
+
+Converts both strings to lowercase before comparing them.
+
+Example: `"HELLO"` and `"hello"` become equal.
+
+## 4. Expected output
+
+Example input
+
+`Hello`
+
+`hello`
+
+Equality
+
+Not Equal
+
+Length
+
+Same
+
+Locale
+
+Not Equal
+
+Ignore Case
+
+Equal
+
+## 5. Possible oral exam questions
+
+Learn these short answers first.
+
+Q1. What is the aim of Experiment 4?
+
+To compare two strings using different JavaScript methods.
+
+Q2. What is string comparison?
+
+It is the process of checking whether two strings are equal or different.
+
+Q3. What is the difference between `==` and `===`?
+
+`==` allows type conversion, while `===` checks equality without type conversion.
+
+Q4. What is a case-sensitive comparison?
+
+A comparison that considers uppercase and lowercase letters different.
+
+Q5. What is a case-insensitive comparison?
+
+A comparison that ignores uppercase and lowercase differences.
+
+Q6. What is the use of `length`?
+
+It returns the number of characters in a string.
+
+Q7. What does `localeCompare()` do?
+
+It compares two strings according to locale-sensitive sorting rules.
+
+Q8. What does `toLowerCase()` do?
+
+It converts a string to lowercase.
+
+Q9. What is a Boolean value?
+
+A value that is either `true` or `false`.
+
+Q10. What is the use of `innerHTML`?
+
+It sets or gets the HTML content inside an element.
+
+## 6. Conclusion for your practical journal
+
+This program compares two strings using equality, length, locale-based, and case-insensitive comparison methods in JavaScript.
+
+## 7. Let's practise your viva!
+
+I'll ask one question at a time, just like your examiner. You answer in your own words, and I'll correct your answer.
+
+Viva practice · Question 1
+
+What is the difference between `==` and `===` in JavaScript?
+
+Hint: Think about type conversion.
+
+Check my answer
