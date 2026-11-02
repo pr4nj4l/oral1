@@ -1,0 +1,214 @@
+Bro ❤️ let's prepare JavaScript Experiment 3: String Operations in the easiest way possible for your practical and oral exam.
+
+I've checked your PDF. The experiment has three main tasks: reverse a string, replace characters, and check whether a string is a palindrome.
+
+## 1. Understand the experiment
+
+A string is a group of characters or text.
+
+Examples: `"hello"`, `"madam"`, `"apple"`
+
+1\. Reverse a string
+
+`hello` → `olleh`
+
+2\. Replace characters
+
+`hello world` → `hello_world`
+
+The program replaces spaces with underscores.
+
+3\. Check palindrome
+
+`madam` → Yes
+
+`hello` → No
+
+A palindrome is a word that reads the same forward and backward, like `madam` or `level`.
+
+## 2. Simple practical code
+
+I've simplified your PDF's code while keeping all three required operations and their important JavaScript methods.
+
+```
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>String Operations</h2>
+
+Enter a string:
+<input type="text" id="str">
+
+<button onclick="operate()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function operate() {
+    let s = document.getElementById("str").value;
+
+    let rev = s.split("").reverse().join("");
+    let rep = s.replace(/ /g, "_");
+
+    let clean = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+    let pal = clean === clean.split("").reverse().join("");
+
+    document.getElementById("result").innerHTML =
+        "Reversed: " + rev + "<br>" +
+        "Replaced: " + rep + "<br>" +
+        "Palindrome: " + (pal ? "Yes" : "No");
+}
+</script>
+
+</body>
+</html>
+
+```
+
+## 3. Understand the code in easy language
+
+You only need to understand these five parts.
+
+Part 1: Get the input
+
+```
+let s = document.getElementById("str").value;
+```
+
+Gets the string entered by the user and stores it in `s`.
+
+Part 2: Reverse the string
+
+```
+let rev = s.split("").reverse().join("");
+```
+
+Remember this sequence:
+
+- `split("")` — converts the string into an array of characters.
+- `reverse()` — reverses the order of characters.
+- `join("")` — joins the characters back into a string.
+
+Example: `hello` → `olleh`
+
+Part 3: Replace spaces
+
+```
+let rep = s.replace(/ /g, "_");
+```
+
+Replaces every space with an underscore `_`.
+
+Example: `hello world` → `hello_world`
+
+Here, `g` means replace all matching spaces, not just the first one.
+
+Part 4: Check palindrome
+
+```
+let clean = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+let pal = clean === clean.split("").reverse().join("");
+```
+
+First, it removes spaces and special characters and converts letters to lowercase. Then it compares the cleaned string with its reverse.
+
+- `===` checks whether two values are equal.
+- If they match, `pal` becomes `true`.
+- Otherwise, `pal` becomes `false`.
+
+Part 5: Display the result
+
+```
+document.getElementById("result").innerHTML =
+    "Reversed: " + rev;
+```
+
+This is the basic idea: `innerHTML` displays the result on the webpage. In the complete program above, it displays all three results.
+
+## 4. Expected output
+
+Try entering `madam` in the program.
+
+### String Operations
+
+Input string
+
+madam
+
+Reversed: madam
+
+Replaced: madam
+
+Palindrome: Yes
+
+If you enter `hello world`, the reversed string is `dlrow olleh`, the replaced string is `hello_world`, and the palindrome result is `No`.
+
+## 5. Possible oral exam questions
+
+Learn these short answers first.
+
+Q1. What is the aim of Experiment 3?
+
+To reverse a string, replace characters, and check whether a string is a palindrome using JavaScript.
+
+Q2. What is a string?
+
+A string is a sequence of characters or text.
+
+Q3. What is a palindrome?
+
+A palindrome is a word that reads the same forward and backward.
+
+Q4. Which methods are used to reverse a string?
+
+`split()`, `reverse()`, and `join()`.
+
+Q5. What does `split("")` do?
+
+It splits a string into individual characters.
+
+Q6. What does `reverse()` do?
+
+It reverses the order of array elements.
+
+Q7. What does `join("")` do?
+
+It joins array elements into a string without adding a separator.
+
+Q8. What is the use of `replace()`?
+
+It replaces a matching part of a string with another value.
+
+Q9. What does `toLowerCase()` do?
+
+It converts letters to lowercase.
+
+Q10. What is the use of `===`?
+
+It checks whether two values are equal in both value and type.
+
+Q11. What does `g` mean in `/ /g`?
+
+It is the global flag, which matches all occurrences instead of stopping at the first match.
+
+Q12. Are strings mutable in JavaScript?
+
+No. Strings are immutable, meaning their characters cannot be changed directly. String methods return new strings.
+
+## 6. Conclusion for your practical journal
+
+This program performs string operations such as reversing a string, replacing spaces with underscores, and checking whether a string is a palindrome using JavaScript.
+
+## 7. Let's practise your viva!
+
+I'll ask one question at a time, just like your examiner. You answer in simple words, and I'll correct you if needed.
+
+Viva practice · Question 1
+
+What is a palindrome?
+
+Hint: Think of the word `madam`.
+
+Check my answer
